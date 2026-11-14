@@ -12,7 +12,6 @@ hf = AutoModelForCausalLM.from_pretrained(config.MODEL, dtype=torch.bfloat16, de
 model = jlens.from_hf(hf, tok)
 lenses = {k: jlens.JacobianLens.load(config.LENS_DIR + v) for k, v in config.LENSES.items()}
 print("versions:", "torch", torch.__version__, "| transformers", transformers.__version__)
-print("first ids of a templated prompt:", tok(chat("x"), add_special_tokens=False)["input_ids"][:4], "| bos id", tok.bos_token_id)
 print("model layers:", model.n_layers, "| reader files cover:", {k: (min(l.source_layers), max(l.source_layers)) for k, l in lenses.items()})
 print("bos_token:", repr(tok.bos_token), "| add_bos_token attr:", getattr(tok, "add_bos_token", "absent"))
 gc = hf.generation_config
@@ -20,6 +19,7 @@ print("generation config:", {k: getattr(gc, k, None) for k in ("do_sample", "tem
 def chat(u): return tok.apply_chat_template([{"role": "user", "content": u}], add_generation_prompt=True, tokenize=False)
 _bos = tok.bos_token or ""
 def rt(p): return p[len(_bos):] if _bos and p.startswith(_bos) else p      # same rule as run_readers.reader_text
+print("first ids of a templated prompt:", tok(chat("x"), add_special_tokens=False)["input_ids"][:4], "| bos id", tok.bos_token_id)
 P = {"short": chat("Which planet is known as the Red Planet?" + config.SUFFIX),
      "unicode": chat("Qui a écrit « Les Misérables » ? 東京 is the capital of which country? Ünïcödé ✓" + config.SUFFIX),
      "long": chat("Background: " + "The quick brown fox jumps over the lazy dog near the river bank. " * 60 + "Question: what animal jumps?" + config.SUFFIX)}
