@@ -1,0 +1,28 @@
+set dev | stamp ca9a598edc7a94be | 0 rows present | 300 to do | gates passed in 14s
+loaded in 28s | generation config: do_sample=True temperature=0.6 top_p=0.9 top_k=None repetition_penalty=None | J:n_prompts=461 R:n_prompts=64 J++:n_prompts=64
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+   1 em=1 contain=1 p_out=0.97 said=100.0 30s 'The medieval practice of appointing a cardinal who' -> 'Nepotism.'
+   2 em=1 contain=1 p_out=0.38 said=100.0 32s 'What is the name of a book where photographs or st' -> 'Album.'
+   3 em=1 contain=1 p_out=0.82 said=80.0 33s 'Last week saw the passing of Bob Guccione, founder' -> 'Penthouse'
+   4 em=1 contain=1 p_out=0.31 said=100.0 34s 'Which city lies at the confluence of the rivers Rh' -> 'Koblenz.'
+   5 em=1 contain=1 p_out=0.38 said=80.0 35s 'What first name is shared by Turner Prize winning ' -> 'Mark'
+   6 em=1 contain=1 p_out=0.93 said=100.0 36s 'Which word is used for the letter U in the phoneti' -> 'Uniform'
+   7 em=1 contain=1 p_out=0.87 said=100.0 38s 'Which member of Led Zeppelin appeared at Glastonbu' -> 'Robert Plant'
+   8 em=1 contain=1 p_out=0.98 said=90.0 40s 'Dame Elizabeth Frink (1930-1993) was famous for wh' -> 'Sculpture.'
+   9 em=1 contain=1 p_out=0.91 said=100.0 42s "Which artist painted the 'Seagram Murals' which we" -> 'Mark Rothko'
+  10 em=1 contain=1 p_out=0.91 said=100.0 44s 'In medicine, if something is subcutaneous it is ap' -> 'Skin.'
+  25 em=1 contain=1 p_out=0.98 said=None 69s 'What is the capital city of Croatia?' -> 'Zagreb.'
+  50 em=1 contain=1 p_out=0.94 said=100.0 106s 'What is the common name for the garden shrub pyrac' -> 'Firethorn.'
+  75 em=1 contain=1 p_out=0.89 said=100.0 145s 'Who wrote The Railway Children?' -> 'E. Nesbit'
+ 100 em=0 contain=0 p_out=0.67 said=80.0 184s 'What is the usual colour of an aircrafts Black Box' -> 'Olive Green.'
+ 125 em=0 contain=1 p_out=0.95 said=100.0 224s 'In which sea are the Cayman Islands?' -> 'The Caribbean Sea.'
+ 150 em=1 contain=1 p_out=0.97 said=100.0 256s 'The tough fibrous membrane called the dura covers ' -> 'The brain and spinal cord.'
+ 175 em=0 contain=0 p_out=0.29 said=100.0 290s '"In the TV series ""Thunderbirds"", Parker was cha' -> 'Brains'
+ 200 em=1 contain=1 p_out=0.80 said=100.0 323s 'Which South American capital is the nearest to the' -> 'Quito, Ecuador.'
+ 225 em=1 contain=1 p_out=0.97 said=100.0 359s "In children's TV by what name is Sir Topham Hatt b" -> 'The Fat Controller.'
+ 250 em=1 contain=1 p_out=1.00 said=100.0 396s 'What is the capital of Uzbekistan?' -> 'Tashkent.'
+ 275 em=0 contain=0 p_out=0.68 said=80.0 434s 'Which female American actress, and singer had a hi' -> 'Natalie Cole'
+ 300 em=1 contain=1 p_out=0.96 said=100.0 469s 'James Esdaile, John Elliotson, Jean-Martin Charcot' -> 'Hypnosis'
+appended 300 rows in 469s | peak VRAM 15.1 GB
+COMPLETE: 300 rows, output sha256 33aff5360b617c2c115d96cf9cd0a05625d842ff220033d2e0ec60602f0d38a7
+EXIT=0
