@@ -1,0 +1,38 @@
+seal 223102eec51bfcef | final set: 1000 questions | exact match: 601 correct, 399 wrong | said invalid: 0 | first token agrees with a plain forward pass on 1000
+picks: {"J": {"dev_auroc": 0.7174, "direction": 1, "layer": 30, "measure": "p1"}, "J++": {"dev_auroc": 0.6634, "direction": 1, "layer": 28, "measure": "p1"}, "R": {"dev_auroc": 0.7391, "direction": -1, "layer": 30, "measure": "ent"}, "logit": {"dev_auroc": 0.7199, "direction": 1, "layer": 30, "measure": "p1"}}
+
+AUROC with 95% bootstrap interval (label: exact match)
+  p_out        0.790  [0.761, 0.818]
+  said         0.802  [0.775, 0.828]
+  logit        0.720  [0.687, 0.752]
+  J            0.731  [0.698, 0.763]
+  R            0.747  [0.715, 0.777]
+  J++          0.679  [0.646, 0.712]
+  logit@L23p1  0.547  [0.510, 0.583]
+  J@L23p1      0.577  [0.541, 0.613]
+  R@L23p1      0.585  [0.550, 0.621]
+  J++@L23p1    0.576  [0.540, 0.612]
+
+PRIMARY: J, R, J++ against the logit lens, picked signals, 98.33% intervals (margin 0.05)
+  A=J            B=logit        diff +0.011  [-0.026, +0.047] (98.33%)  direction unresolved; practically equivalent within the margin
+  A=R            B=logit        diff +0.027  [+0.003, +0.051] (98.33%)  A higher; practical size unresolved
+  A=J++          B=logit        diff -0.041  [-0.083, +0.003] (98.33%)  direction unresolved; practical size unresolved
+
+SECONDARY, descriptive (95% intervals)
+  A=logit        B=p_out        diff -0.069  [-0.100, -0.040] (95.00%)  B higher; practical size unresolved
+  A=J            B=p_out        diff -0.059  [-0.087, -0.032] (95.00%)  B higher; practical size unresolved
+  A=R            B=p_out        diff -0.043  [-0.069, -0.017] (95.00%)  B higher; practical size unresolved
+  A=J++          B=p_out        diff -0.110  [-0.148, -0.072] (95.00%)  B higher; B better by more than the margin
+  A=logit        B=said         diff -0.082  [-0.118, -0.047] (95.00%)  B higher; practical size unresolved
+  A=J            B=said         diff -0.071  [-0.106, -0.037] (95.00%)  B higher; practical size unresolved
+  A=R            B=said         diff -0.055  [-0.089, -0.022] (95.00%)  B higher; practical size unresolved
+  A=J++          B=said         diff -0.122  [-0.160, -0.085] (95.00%)  B higher; B better by more than the margin
+  robustness, no selection: each reader at the fixed layer and measure against the logit lens there
+  A=J@L23p1      B=logit@L23p1  diff +0.031  [-0.009, +0.070] (95.00%)  direction unresolved; practical size unresolved
+  A=R@L23p1      B=logit@L23p1  diff +0.038  [+0.003, +0.073] (95.00%)  A higher; practical size unresolved
+  A=J++@L23p1    B=logit@L23p1  diff +0.029  [-0.008, +0.067] (95.00%)  direction unresolved; practical size unresolved
+
+SENSITIVITY 1, rows with a valid stated confidence only (n=1000): AUROC of every signal
+  p_out 0.790 | said 0.802 | logit 0.720 | J 0.731 | R 0.747 | J++ 0.679
+SENSITIVITY 2, containment label instead of exact match (700 correct; labels disagree on 99): AUROC of every signal
+  p_out 0.815 | said 0.837 | logit 0.765 | J 0.763 | R 0.785 | J++ 0.725

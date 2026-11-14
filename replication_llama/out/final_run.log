@@ -1,0 +1,26 @@
+set final | stamp 223102eec51bfcef | 0 rows present | 1000 to do | gates passed in 32s
+loaded in 46s | generation config: do_sample=True temperature=0.6 top_p=0.9 top_k=None repetition_penalty=None | J:n_prompts=461 R:n_prompts=64 J++:n_prompts=64
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+  50 em=1 contain=1 p_out=0.99 said=100.0 118s (final: text not shown)
+ 100 em=0 contain=0 p_out=0.25 said=20.0 190s (final: text not shown)
+ 150 em=0 contain=0 p_out=0.97 said=80.0 267s (final: text not shown)
+ 200 em=1 contain=1 p_out=0.99 said=80.0 348s (final: text not shown)
+ 250 em=1 contain=1 p_out=0.99 said=80.0 419s (final: text not shown)
+ 300 em=1 contain=1 p_out=0.99 said=100.0 493s (final: text not shown)
+ 350 em=0 contain=0 p_out=0.24 said=60.0 566s (final: text not shown)
+ 400 em=1 contain=1 p_out=0.92 said=100.0 638s (final: text not shown)
+ 450 em=0 contain=1 p_out=0.45 said=95.0 712s (final: text not shown)
+ 500 em=1 contain=1 p_out=0.87 said=100.0 783s (final: text not shown)
+ 550 em=1 contain=1 p_out=1.00 said=100.0 854s (final: text not shown)
+ 600 em=0 contain=0 p_out=0.35 said=95.0 921s (final: text not shown)
+ 650 em=1 contain=1 p_out=1.00 said=100.0 988s (final: text not shown)
+ 700 em=0 contain=0 p_out=0.34 said=80.0 1057s (final: text not shown)
+ 750 em=1 contain=1 p_out=0.99 said=100.0 1125s (final: text not shown)
+ 800 em=0 contain=0 p_out=0.65 said=0.0 1194s (final: text not shown)
+ 850 em=0 contain=0 p_out=0.75 said=80.0 1259s (final: text not shown)
+ 900 em=0 contain=1 p_out=1.00 said=90.0 1332s (final: text not shown)
+ 950 em=0 contain=0 p_out=0.26 said=90.0 1404s (final: text not shown)
+1000 em=0 contain=0 p_out=0.16 said=80.0 1473s (final: text not shown)
+appended 1000 rows in 1473s | peak VRAM 15.1 GB
+COMPLETE: 1000 rows, output sha256 bbe0aa7758cd978133990f25be257c2ca2b6fadf94347e1e56fade7d676782af
+EXIT=0
