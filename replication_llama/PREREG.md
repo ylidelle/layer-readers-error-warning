@@ -122,6 +122,31 @@ is unknown and is reported as unknown.
 
 ## Development results
 
-(pasted here after step 2)
+Output of `analyze.py select`, run ONCE on the rented machine on 2026-11-15 at about 03:21 Manila, after Amendment 1
+was published (public commit 7ec8f23) and after Lucien's GO for this one selection. The local copy of this log and of
+`picks.json` were rebuilt from the machine's printed output and have the same sha256 as the files on the machine
+(select.log 735d2d7d…e778d4; picks.json 42652c77…9dae3).
 
-SEALED: (not yet)
+```
+development set: 300 questions | exact match: 184 correct, 116 wrong | containment label: 213 correct | the two labels disagree on 29
+said: 1 invalid replies; distinct valid values [0.0, 20.0, 60.0, 80.0, 90.0, 95.0, 100.0]
+baselines on dev: p_out 0.807 | said 0.730
+first token agrees with a plain forward pass on 300 of 300
+logit pick: layer 30 p1     direction +1 dev AUROC 0.720 | next: L30 ent 0.716, L29 ent 0.698, L29 p1 0.686 | fixed L23 p1: 0.609
+J     pick: layer 30 p1     direction +1 dev AUROC 0.717 | next: L30 ent 0.711, L29 ent 0.696, L29 p1 0.686 | fixed L23 p1: 0.583
+R     pick: layer 30 ent    direction -1 dev AUROC 0.739 | next: L30 p1 0.718, L29 ent 0.703, L29 p1 0.692 | fixed L23 p1: 0.577
+J++   pick: layer 28 p1     direction +1 dev AUROC 0.663 | next: L28 ent 0.646, L28 margin 0.634, L29 p1 0.630 | fixed L23 p1: 0.561
+picks.json written under stamp ca9a598edc7a94be | sha256 42652c77759fc00f39ee33db16be97157bcd06753da86c964e92485aec19dae3
+EXIT=0
+```
+
+In words: on development data Llama answered 184 of 300 correctly by exact match (containment: 213; the two labels
+disagree on 29, more than in the Qwen study). Stated confidence took seven distinct values and one reply was invalid.
+The picks differ from Qwen's: logit lens and J-lens at layer 30 with top-1 probability, R-lens at layer 30 with
+entropy, J++ at layer 28 with top-1 probability. On development data no newer reader is clearly ahead of the logit
+lens, and all four are below `p_out`. These numbers are flattered by selection and are stated for comparison with the
+final result, not as findings.
+
+SEALED: this text was fixed by Opie at 2026-11-15 03:29 Manila and its hash posted in the team chat BEFORE Lucien's final GO. The
+seal on the rented machine (`seal.py make`) is made only after his explicit GO in words, from this exact text; the
+time of that GO is recorded in the report, not here, because this file does not change after this line.

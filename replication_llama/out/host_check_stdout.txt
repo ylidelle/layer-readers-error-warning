@@ -1,0 +1,120 @@
+versions: torch 2.8.0+cu128 | transformers 5.14.1
+model layers: 32 | reader files cover: {'J': (0, 30), 'R': (0, 30), 'J++': (0, 30)}
+bos_token: '<|begin_of_text|>' | add_bos_token attr: True
+generation config: {'do_sample': True, 'temperature': 0.6, 'top_p': 0.9, 'top_k': None, 'repetition_penalty': None, 'no_repeat_ngram_size': None, 'suppress_tokens': None, 'begin_suppress_tokens': None, 'forced_eos_token_id': None}
+first ids of a templated prompt: [128000, 128006, 9125, 128007] | bos id 128000
+
+== short: 53 tokens
+{
+ "n_tokens": 53,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 53,
+ "first_token": 44,
+ "argmax": {
+  "forward": 44,
+  "gen_logits": 44,
+  "gen_scores": 44,
+  "reader_model_logits": 44,
+  "logit_lens_L31": 44,
+  "logit_lens_L30": 21725
+ },
+ "top1_prob": {
+  "forward": 0.9998736381530762,
+  "gen_logits": 0.9998736381530762,
+  "gen_scores": 0.9998736381530762,
+  "reader_model_logits": 0.9998736381530762,
+  "logit_lens_L31": 0.9998736381530762,
+  "logit_lens_L30": 0.4695352017879486
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.03125,
+  "reader_model_logits vs forward": 0.03125,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 15.734375
+ },
+ "scores_have_minus_inf": false
+}
+
+== unicode: 69 tokens
+{
+ "n_tokens": 69,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 69,
+ "first_token": 37225,
+ "argmax": {
+  "forward": 37225,
+  "gen_logits": 37225,
+  "gen_scores": 37225,
+  "reader_model_logits": 37225,
+  "logit_lens_L31": 37225,
+  "logit_lens_L30": 33412
+ },
+ "top1_prob": {
+  "forward": 0.9958747029304504,
+  "gen_logits": 0.9958747029304504,
+  "gen_scores": 0.9958747029304504,
+  "reader_model_logits": 0.9958747029304504,
+  "logit_lens_L31": 0.9958747029304504,
+  "logit_lens_L30": 0.6301172375679016
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.0625,
+  "reader_model_logits vs forward": 0.0625,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 11.96875
+ },
+ "scores_have_minus_inf": false
+}
+
+== long: 892 tokens
+{
+ "n_tokens": 892,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 512,
+ "first_token": 791,
+ "argmax": {
+  "forward": 791,
+  "gen_logits": 791,
+  "gen_scores": 791,
+  "reader_model_logits": 791,
+  "logit_lens_L31": 791,
+  "logit_lens_L30": 791
+ },
+ "top1_prob": {
+  "forward": 0.7333610653877258,
+  "gen_logits": 0.7333610653877258,
+  "gen_scores": 0.7333610653877258,
+  "reader_model_logits": 0.7333610653877258,
+  "logit_lens_L31": 0.7333610653877258,
+  "logit_lens_L30": 0.6165599226951599
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.0625,
+  "reader_model_logits vs forward": 0.0625,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 14.0
+ },
+ "scores_have_minus_inf": false
+}
+
+TOKEN IDS IDENTICAL FOR EVERY READER ON EVERY PROMPT: True
+EXIT=0
+ALLDONE

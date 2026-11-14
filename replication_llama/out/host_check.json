@@ -1,0 +1,107 @@
+{
+ "short": {
+  "n_tokens": 53,
+  "ids_equal_all_readers": {
+   "logit": true,
+   "J": true,
+   "R": true,
+   "J++": true
+  },
+  "library_default_would_truncate_to": 53,
+  "first_token": 44,
+  "argmax": {
+   "forward": 44,
+   "gen_logits": 44,
+   "gen_scores": 44,
+   "reader_model_logits": 44,
+   "logit_lens_L31": 44,
+   "logit_lens_L30": 21725
+  },
+  "top1_prob": {
+   "forward": 0.9998736381530762,
+   "gen_logits": 0.9998736381530762,
+   "gen_scores": 0.9998736381530762,
+   "reader_model_logits": 0.9998736381530762,
+   "logit_lens_L31": 0.9998736381530762,
+   "logit_lens_L30": 0.4695352017879486
+  },
+  "max_abs_diff": {
+   "gen_scores vs gen_logits": 0.0,
+   "gen_logits vs forward": 0.03125,
+   "reader_model_logits vs forward": 0.03125,
+   "logit_lens_L31 vs reader_model_logits": 0.0,
+   "logit_lens_L30 vs forward": 15.734375
+  },
+  "scores_have_minus_inf": false
+ },
+ "unicode": {
+  "n_tokens": 69,
+  "ids_equal_all_readers": {
+   "logit": true,
+   "J": true,
+   "R": true,
+   "J++": true
+  },
+  "library_default_would_truncate_to": 69,
+  "first_token": 37225,
+  "argmax": {
+   "forward": 37225,
+   "gen_logits": 37225,
+   "gen_scores": 37225,
+   "reader_model_logits": 37225,
+   "logit_lens_L31": 37225,
+   "logit_lens_L30": 33412
+  },
+  "top1_prob": {
+   "forward": 0.9958747029304504,
+   "gen_logits": 0.9958747029304504,
+   "gen_scores": 0.9958747029304504,
+   "reader_model_logits": 0.9958747029304504,
+   "logit_lens_L31": 0.9958747029304504,
+   "logit_lens_L30": 0.6301172375679016
+  },
+  "max_abs_diff": {
+   "gen_scores vs gen_logits": 0.0,
+   "gen_logits vs forward": 0.0625,
+   "reader_model_logits vs forward": 0.0625,
+   "logit_lens_L31 vs reader_model_logits": 0.0,
+   "logit_lens_L30 vs forward": 11.96875
+  },
+  "scores_have_minus_inf": false
+ },
+ "long": {
+  "n_tokens": 892,
+  "ids_equal_all_readers": {
+   "logit": true,
+   "J": true,
+   "R": true,
+   "J++": true
+  },
+  "library_default_would_truncate_to": 512,
+  "first_token": 791,
+  "argmax": {
+   "forward": 791,
+   "gen_logits": 791,
+   "gen_scores": 791,
+   "reader_model_logits": 791,
+   "logit_lens_L31": 791,
+   "logit_lens_L30": 791
+  },
+  "top1_prob": {
+   "forward": 0.7333610653877258,
+   "gen_logits": 0.7333610653877258,
+   "gen_scores": 0.7333610653877258,
+   "reader_model_logits": 0.7333610653877258,
+   "logit_lens_L31": 0.7333610653877258,
+   "logit_lens_L30": 0.6165599226951599
+  },
+  "max_abs_diff": {
+   "gen_scores vs gen_logits": 0.0,
+   "gen_logits vs forward": 0.0625,
+   "reader_model_logits vs forward": 0.0625,
+   "logit_lens_L31 vs reader_model_logits": 0.0,
+   "logit_lens_L30 vs forward": 14.0
+  },
+  "scores_have_minus_inf": false
+ }
+}

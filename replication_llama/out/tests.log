@@ -1,0 +1,17 @@
+set dev | stamp bfe48dec896a7fa4 | 3 rows present | 0 to do | gates passed in 0s
+COMPLETE: 3 rows, output sha256 6c872517c6af829acad9fa6a3e85363c619d4f93499484e1f401f08f4d96c4a2
+development set: 3 questions | exact match: 2 correct, 1 wrong | containment label: 2 correct | the two labels disagree on 0
+said: 0 invalid replies; distinct valid values [90.0]
+baselines on dev: p_out 0.500 | said 0.500
+first token agrees with a plain forward pass on 3 of 3
+logit pick: layer  0 p1     direction +1 dev AUROC 0.500 | next: L0 ent 0.500, L0 margin 0.500, L1 p1 0.500 | fixed L23 p1: 0.500
+J     pick: layer  0 p1     direction +1 dev AUROC 0.500 | next: L0 ent 0.500, L0 margin 0.500, L1 p1 0.500 | fixed L23 p1: 0.500
+R     pick: layer  0 p1     direction +1 dev AUROC 0.500 | next: L0 ent 0.500, L0 margin 0.500, L1 p1 0.500 | fixed L23 p1: 0.500
+J++   pick: layer  0 p1     direction +1 dev AUROC 0.500 | next: L0 ent 0.500, L0 margin 0.500, L1 p1 0.500 | fixed L23 p1: 0.500
+picks.json written under stamp bfe48dec896a7fa4 | sha256 b0323712a84d734069330ef207ab7f2db6c252b7a92953963e175460e8c26778
+SEAL.json written. sha256: fa3178a2a2068e3009e0d2b3bbf2c46e38ba26c9c8667b0590670587759449c3
+PREREG.md sha256: 045f279c2e9946c21bc46a84b5a3630ac3a59ae3417f1ecf7cb31b60ed52085a
+set final | stamp fa3178a2a2068e30 | 4 rows present | 0 to do | gates passed in 0s
+COMPLETE: 4 rows, output sha256 f93acff9b2f92569f19afa18433b2fa367cba9eda19a91f0c06aeb00261813c0
+ALL 115 CHECKS PASSED (asserts on)
+EXIT=0
