@@ -39,7 +39,8 @@ Everything in this folder was written inside the sprint window, on 14 November 2
 | `make_results.py`, `precision_check.py` | Report tables and figures from the analysis log; the three primary intervals to six decimals. |
 | (reviews) | Lucien's four review documents and his clearance are his own files and are not in this first release; they will be added if he agrees. Their findings are summarised in `PREREG.md` and `REPORT_NOTES_post_seal.md`. |
 | `REPORT_NOTES_post_seal.md` | Corrections made after the seal, including a process fault of ours. Read this beside `PREREG.md`. |
-| `report/` | The report as cleared by the reviewer: `PAPER_EPI.pdf`, `PAPER_EPI.md`. |
+| `report/` | Two reports, each cleared by the reviewer as exact bytes. `PAPER_EPI_with_replication.pdf` / `.md` (sha256 of the PDF: ac3a2833edb62a805b5eee1bf515fd6b89b7d25fa3e79451716a0fc918eda5f9) is the current one: the Qwen study plus the separately registered replication on Llama 3.1 8B-Instruct. `PAPER_EPI.pdf` / `.md` is the earlier Qwen-only report, kept unchanged. |
+| `replication_llama/` | The replication on Llama 3.1 8B-Instruct: its registration with Amendment 1 (`PREREG.md`), `SEAL.json`, the code as run, and `out/` with the host checks, development and final outputs, manifests, selection and analysis logs. The run used a rented GPU; these files were pushed from that machine (commits 2ad0f23 and 7a26e4f) and checked against the hashes printed there. The two `*_run.log` files hold progress lines with answer snippets. |
 | `out/` | Run outputs (question ids, answers and signals; no question text), manifests, analysis logs, figures. |
 
 ## To reproduce
