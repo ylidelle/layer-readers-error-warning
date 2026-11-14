@@ -44,6 +44,8 @@ Everything in this folder was written inside the sprint window, on 14 November 2
 
 ## To reproduce
 
+**Paths.** `config.py` (`BASE`, `MODEL`, `LENS_DIR`) and `build_sets.py` (`SRC`, `OUT`) hold the absolute paths of the machine the study ran on. They are part of the sealed files, so they are left exactly as they were. To rerun, change those lines to your own folders; that changes the inference stamp, which is expected, since your copy is a new run under your own seal.
+
 1. Put the model and the three reader files where `config.py` points, and TriviaQA's `rc.nocontext` validation
    parquet where `build_sets.py` points. Run `build_sets.py`; the two hashes must match `config.py`.
 2. `python tests.py` and `python -O tests.py`.
