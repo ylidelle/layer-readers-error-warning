@@ -1,0 +1,122 @@
+{
+ "analysis_code": {
+  "analyze.py": "36bce910512710191ee32c2dde8905c047484b01147cd3f8211b8855fd8e5148",
+  "build_sets.py": "345344b500fa7ce4e57d54b98953aded6ab57448a9bd2f8c52a5b25b13749607"
+ },
+ "inference": {
+  "code": {
+   "config.py": "98dfe130aaf99b54e6866379ff68389446534399c02a3409103a73b9cd03dfbd",
+   "marking.py": "a87e61bc0bf1808cac714bfe113c6f3071bc46ed120cc23cb0d6536b5bc7fa1c",
+   "run_readers.py": "0548100926291d31635270bcaa1dc413f88309d4d9207281db44266e51e65173",
+   "seal.py": "ca7bf69f28c131e62635b81140bef923cc6ae77e1a99edf4c4fdd94dd6ee7cec"
+  },
+  "data": {
+   "dev": "2f6651f4686653bcce8ae8b0071897777f17ab5fcd2610929313325a448ffd77",
+   "final": "586e55001cbac1ce5c2051b7dc08a2c21544bbeb95ae07c3ab5860a949d67040"
+  },
+  "lenses": {
+   "J": "c2e20eb414caf67da4c271fb9be52c5b84cb0af5c3c42ff93b88b55f7e67b154",
+   "J++": "cf0168a259a095e188b7ba17cdafceb8c92c04893a1469922a6d2a9093c1d7d7",
+   "R": "843b3723b752a0345b90c46fe0f9faea4be20eefb132da198d49bc3632fa46a9"
+  },
+  "model": {
+   "LICENSE": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+   "README.md": "1406be1b6b8fd8a6545870da516912804756593628a1d0fb0a7965211e82a7bb",
+   "_files.txt": "7ad9664822ca92a9d53023a25d217755b34986eb7a4b2dc87f44754f86ff5ed2",
+   "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+   "config.json": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+   "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+   "model.safetensors-00001-of-00002.safetensors": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61",
+   "model.safetensors-00002-of-00002.safetensors": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188",
+   "model.safetensors.index.json": "cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d",
+   "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+   "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+   "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+   "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+   "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "settings": {
+   "ASK_CONF": "How confident are you that your answer is correct? Reply with a number from 0 to 100 only.",
+   "DATA_SHA": {
+    "dev": "2f6651f4686653bcce8ae8b0071897777f17ab5fcd2610929313325a448ffd77",
+    "final": "586e55001cbac1ce5c2051b7dc08a2c21544bbeb95ae07c3ab5860a949d67040"
+   },
+   "GEN": {
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "enable_thinking": false,
+    "max_new_tokens_answer": 24,
+    "max_new_tokens_conf": 6
+   },
+   "LAYERS": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "LENSES": {
+    "J": "jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens.pt",
+    "J++": "jpp/Salesforce-wikitext/Qwen3.5-4B_jpp_lens.pt",
+    "R": "rlens/Salesforce-wikitext/Qwen3.5-4B_rlens.pt"
+   },
+   "MAX_SEQ": 4096,
+   "MEASURES": [
+    "p1",
+    "ent",
+    "margin"
+   ],
+   "MODEL_TAG": "qwen35_4b",
+   "N_MODEL_LAYERS": 32,
+   "N_ROWS": {
+    "dev": 300,
+    "final": 1000
+   },
+   "READERS": [
+    "logit",
+    "J",
+    "R",
+    "J++"
+   ],
+   "SUFFIX": " Answer with just the answer, no explanation."
+  },
+  "versions": {
+   "jlens": "0.1.0",
+   "numpy": "2.5.1",
+   "python": "3.13.6",
+   "tokenizers": "0.22.2",
+   "torch": "2.6.0+cu124",
+   "transformers": "5.14.1"
+  }
+ },
+ "inference_stamp": "b4a9d9264453af833c717b1f108a67f4b7306971be824209153e893c7b52747f",
+ "picks_made_under_stamp": "b4a9d9264453af833c717b1f108a67f4b7306971be824209153e893c7b52747f",
+ "picks_sha": "462c9b63fe099a4b789f2efd423cb953f87d65da47e75c1c9f6cdeb18cf1051c",
+ "prereg_sha": "09797bbcc6a70b58761d0f2a00783e17ab7ef64755b75379b30e8aa8ef9e2edb"
+}

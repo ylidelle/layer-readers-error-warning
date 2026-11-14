@@ -1,0 +1,9 @@
+development set: 300 questions | exact match: 111 correct, 189 wrong | containment label: 123 correct | the two labels disagree on 12
+said: 0 invalid replies; distinct valid values [0.0, 95.0, 100.0]
+baselines on dev: p_out 0.865 | said 0.566
+first token agrees with a plain forward pass on 300 of 300
+logit pick: layer 30 ent    direction -1 dev AUROC 0.702 | next: L28 ent 0.699, L30 p1 0.694, L27 ent 0.685 | fixed L23 p1: 0.539
+J     pick: layer 30 ent    direction -1 dev AUROC 0.826 | next: L30 p1 0.797, L29 ent 0.744, L29 p1 0.744 | fixed L23 p1: 0.626
+R     pick: layer 30 ent    direction -1 dev AUROC 0.773 | next: L30 p1 0.763, L29 ent 0.717, L29 p1 0.715 | fixed L23 p1: 0.631
+J++   pick: layer 30 ent    direction -1 dev AUROC 0.752 | next: L30 p1 0.745, L29 ent 0.705, L28 ent 0.695 | fixed L23 p1: 0.623
+picks.json written under stamp b4a9d9264453af83 | sha256 462c9b63fe099a4b789f2efd423cb953f87d65da47e75c1c9f6cdeb18cf1051c

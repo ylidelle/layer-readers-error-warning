@@ -1,0 +1,11 @@
+reviewer A ratings file sha256 c08985573e2a95e6a82005207852968ceb0189e48168a9a9a028bd52bb4ef4c8  (each reviewer confirms this is the hash they recorded)
+reviewer B ratings file sha256 e851410b6e59ae4be24082a508361fe5a91554a829fbb026166b1d8acae8a35d  (each reviewer confirms this is the hash they recorded)
+ALL 100 ROWS: same judgement on 93; at least one 'uncertain' on 7; different judgements on 7
+DETERMINATE-AGREEMENT SUBSET: 93 of 100 rows where both reviewers gave the same sure judgement. Marker errors below use THIS denominator; it is not an unbiased estimate for all 100.
+correct_em: marked correct but judged incorrect: 0 of 93; marked wrong but judged correct: 6 of 93
+   ids marked correct, judged incorrect: []
+   ids marked wrong, judged correct: ['tb_53', 'qw_8018', 'sfq_16268', 'qw_3808', 'odql_1018', 'qg_2879']
+correct_contain: marked correct but judged incorrect: 1 of 93; marked wrong but judged correct: 4 of 93
+   ids marked correct, judged incorrect: ['sfq_14830']
+   ids marked wrong, judged correct: ['qw_8018', 'sfq_16268', 'qw_3808', 'qg_2879']
+rows without determinate agreement: [('qg_4484', 'uncertain', 'incorrect'), ('odql_4233', 'incorrect', 'uncertain'), ('bb_8661', 'uncertain', 'correct'), ('bb_118', 'uncertain', 'incorrect'), ('bb_3702', 'uncertain', 'incorrect'), ('qw_12970', 'incorrect', 'uncertain'), ('dpql_3845', 'uncertain', 'incorrect')]

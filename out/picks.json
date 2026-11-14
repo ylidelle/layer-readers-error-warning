@@ -1,0 +1,31 @@
+{
+ "dev_output_sha": "3f1d6ce58b120554b27c92bfdebf112e9069ae1c02a7908112f2bdf126eca2c2",
+ "inference_stamp": "b4a9d9264453af833c717b1f108a67f4b7306971be824209153e893c7b52747f",
+ "label": "correct_em",
+ "picks": {
+  "J": {
+   "dev_auroc": 0.8257,
+   "direction": -1,
+   "layer": 30,
+   "measure": "ent"
+  },
+  "J++": {
+   "dev_auroc": 0.752,
+   "direction": -1,
+   "layer": 30,
+   "measure": "ent"
+  },
+  "R": {
+   "dev_auroc": 0.7733,
+   "direction": -1,
+   "layer": 30,
+   "measure": "ent"
+  },
+  "logit": {
+   "dev_auroc": 0.7019,
+   "direction": -1,
+   "layer": 30,
+   "measure": "ent"
+  }
+ }
+}

@@ -1,0 +1,118 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+versions: torch 2.6.0+cu124 | transformers 5.14.1 | jlens 0.1.0 (installed copy)
+model layers: 32 | reader files cover: {'J': (0, 30), 'R': (0, 30), 'J++': (0, 30)}
+bos_token: None | add_bos_token attr: False
+generation config: {'do_sample': None, 'temperature': None, 'top_p': None, 'top_k': None, 'repetition_penalty': None, 'no_repeat_ngram_size': None, 'suppress_tokens': None, 'begin_suppress_tokens': None, 'forced_eos_token_id': None}
+
+== short: 30 tokens
+{
+ "n_tokens": 30,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 30,
+ "first_token": 44,
+ "argmax": {
+  "forward": 44,
+  "gen_logits": 44,
+  "gen_scores": 44,
+  "reader_model_logits": 44,
+  "logit_lens_L31": 44,
+  "logit_lens_L30": 20403
+ },
+ "top1_prob": {
+  "forward": 0.9778711199760437,
+  "gen_logits": 0.9778711199760437,
+  "gen_scores": 0.9778711199760437,
+  "reader_model_logits": 0.9778711199760437,
+  "logit_lens_L31": 0.9778711199760437,
+  "logit_lens_L30": 0.8197107911109924
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.03125,
+  "reader_model_logits vs forward": 0.03125,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 17.25
+ },
+ "scores_have_minus_inf": false
+}
+
+== unicode: 45 tokens
+{
+ "n_tokens": 45,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 45,
+ "first_token": 34930,
+ "argmax": {
+  "forward": 34930,
+  "gen_logits": 34930,
+  "gen_scores": 34930,
+  "reader_model_logits": 34930,
+  "logit_lens_L31": 34930,
+  "logit_lens_L30": 34930
+ },
+ "top1_prob": {
+  "forward": 0.7287153601646423,
+  "gen_logits": 0.7287149429321289,
+  "gen_scores": 0.7287149429321289,
+  "reader_model_logits": 0.7287149429321289,
+  "logit_lens_L31": 0.7287149429321289,
+  "logit_lens_L30": 0.7269392013549805
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.03125,
+  "reader_model_logits vs forward": 0.03125,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 14.5625
+ },
+ "scores_have_minus_inf": false
+}
+
+== long: 869 tokens
+{
+ "n_tokens": 869,
+ "ids_equal_all_readers": {
+  "logit": true,
+  "J": true,
+  "R": true,
+  "J++": true
+ },
+ "library_default_would_truncate_to": 512,
+ "first_token": 14576,
+ "argmax": {
+  "forward": 14576,
+  "gen_logits": 14576,
+  "gen_scores": 14576,
+  "reader_model_logits": 14576,
+  "logit_lens_L31": 14576,
+  "logit_lens_L30": 37550
+ },
+ "top1_prob": {
+  "forward": 0.8081206679344177,
+  "gen_logits": 0.8081206679344177,
+  "gen_scores": 0.8081206679344177,
+  "reader_model_logits": 0.8081206679344177,
+  "logit_lens_L31": 0.8081206679344177,
+  "logit_lens_L30": 0.3734726905822754
+ },
+ "max_abs_diff": {
+  "gen_scores vs gen_logits": 0.0,
+  "gen_logits vs forward": 0.0625,
+  "reader_model_logits vs forward": 0.0625,
+  "logit_lens_L31 vs reader_model_logits": 0.0,
+  "logit_lens_L30 vs forward": 12.34375
+ },
+ "scores_have_minus_inf": false
+}
+
+TOKEN IDS IDENTICAL FOR EVERY READER ON EVERY PROMPT: True
