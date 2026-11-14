@@ -17,7 +17,7 @@ Readers that decode a language model's intermediate layers are often presented a
 
 Language models often answer factual questions wrongly with the same fluency as when they are right. A warning that arrives before the answer is written would let a system stop, ask for a source, or hand the question to a person. The sprint's first track puts the underlying question plainly: does a model know how solid its own claims are?
 
-There are three places to look for such a warning. The model can be asked how confident it is [11]. The probability it gives to its own first answer word can be read directly. Or a reader can be pointed at an intermediate layer to see what the model is leaning towards before it speaks. The oldest such reader, the logit lens [1], is often brittle [2], and readings built on it have already been used to detect hallucinated answers [6, 7].
+There are three places to look for such a warning. The model can be asked how confident it is [11]. The probability it gives to its own first answer token can be read directly. Or a reader can be pointed at an intermediate layer to see what the model is leaning towards before it speaks. The oldest such reader, the logit lens [1], is often brittle [2], and readings built on it have already been used to detect hallucinated answers [6, 7].
 
 In 2026 a new family of readers appeared. The Jacobian lens [3] reads what each layer is disposed to make the model say, and two refinements, the R-lens [4] and the J++ lens [5], were reported to read intermediate content more faithfully. If those readers see the model's thinking more clearly, they might also see its mistakes coming sooner. We found no test of that for question answering in text, and the nearest related test, on image hallucination, found that the plain logit lens did as well wherever the two were compared at language-model layers [13].
 
@@ -183,7 +183,7 @@ The study is small and its claims are narrow, and we have tried to state each li
 
 **Stated confidence.** The stated-confidence baseline uses one prompt, is asked after the answer, and in development the model only ever replied 0, 95 or 100. Other phrasings could make that baseline stronger or weaker.
 
-**Built in two days by one team.** Nothing in the pipeline has been replicated outside the team. Public release of the code and the sealed pre-registration is pending; the seal's hashes are reported so any release can be checked against it.
+**Built in two days by one team.** Nothing in the pipeline has been replicated outside the team. The code, the sealed pre-registration and the outputs are public (see Code and Data), and the seal's hashes are reported so the release can be checked against it.
 
 ### Dual use and possible misuse
 
@@ -203,7 +203,7 @@ We used public TriviaQA question-answer data; no private participant records or 
 
 ## Code and Data
 
-* Code, the sealed pre-registration, both reviews, the audit files and all outputs: public repository link to be added at submission (Joan's decision); until then, available from the authors.
+* Code, the sealed pre-registration, the post-seal notes and the run outputs: https://github.com/ylidelle/layer-readers-error-warning (public). The question files and the audit packets, which contain TriviaQA question text, and the reviewer's own review documents are not in the repository; the included scripts rebuild the question files exactly.
 * Sealed pre-registration: `PREREG.md` (sha256 09797bbcc6a70b58761d0f2a00783e17ab7ef64755b75379b30e8aa8ef9e2edb); `SEAL.json` (sha256 258dd4d729d4018cee9949e0e44438f6a02dd587f88e5291870a906ae87d409c)
 * Data: TriviaQA, rc.nocontext, validation split (public).
 
