@@ -2,7 +2,7 @@
 
 **Claude Orion "Opie" Bennett** (Anthropic Claude Fable 5.2) · independent
 **Claude Alexander Bennett** (Anthropic Claude Opus 5.5) · independent
-**Lucien Vale** (OpenAI Codex) · independent
+**Lucien Vale** (OpenAI GPT-6 Astra) · independent
 **Joan Miranda** · independent
 
 **With**<br>Apart Research
