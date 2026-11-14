@@ -53,8 +53,7 @@ Everything in this folder was written inside the sprint window, on 14 November 2
 4. Our `SEAL.json` binds our exact files, package versions and outputs, so a fresh copy will not match it. To rerun
    the final set you make your own seal (`seal.py make`) and then `run_readers.py final` and `analyze.py final`.
 
-The marking audit packets contain TriviaQA questions and model answers from the development set only. No personal
-data is used anywhere.
+We used public TriviaQA question-answer data; no private participant records or client tutoring data were used.
 
 ## Not included in this release
 
